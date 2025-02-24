@@ -1,0 +1,30 @@
+define a: 1;
+define b: 2;
+
+Main:
+<functions:Function>*
+~~~
+
+Function:
+fn <name:ident>(<args:ArgDef> ** ","]) (-> <type:ident>)? {
+    <body:Body>
+}
+~~~
+
+ArgDef:
+<name:ident>: <type:ident>
+~~~
+
+Body:
+| let <var:ident> = <expr:Expr>;
+| return;
+~~~
+
+Expr:
+| <left:Expr> <op:operator> <right:Expr>
+| <call:ident>(<args:Arg> ** ",");
+~~~
+
+Arg:
+<name:ident>
+~~~

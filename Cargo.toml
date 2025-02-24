@@ -1,0 +1,24 @@
+[package]
+name = "tmpl"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.95"
+clap = { version = "4.5.29", features = ["derive"] }
+logos = "0.15.0"
+peg = { version = "0.8.4" }
+regex = "1.11.1"
+rsn = "0.2.0"
+serde = { version = "1.0.217", features = ["derive"] }
+serde_regex = "1.1.0"
+serde_yaml = "0.9.34"
+stringlit = "2.1.0"
+thiserror = "2.0.11"
+
+[build-dependencies]
+lalrpop = "0.22.1"
+
+[features]
+"default" = []
+"trace" = ["peg/trace"]

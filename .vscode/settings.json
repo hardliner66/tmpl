@@ -1,0 +1,6 @@
+{
+    "cSpell.words": [
+        "thiserror"
+    ],
+    "rust-analyzer.cargo.buildScripts.enable": true
+}
